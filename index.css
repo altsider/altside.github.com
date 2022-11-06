@@ -152,3 +152,7 @@ main{
 	font-weight: bolder;
 	font-size: 2em;
 }
+#card{
+	display: fixed;
+	top: 0;
+}
