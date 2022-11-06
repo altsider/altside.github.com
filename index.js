@@ -1,5 +1,5 @@
 function expand(that){
-	document.querySelector("#card").src = that.src;
+	document.querySelector("#view").src = that.src;
 	// deleteChildren("#refs");
 
 	// var refs = that.dataset.refs;
