@@ -1,50 +1,34 @@
 function expand(that){
-	document.querySelector("#view").src = that.src;
-	// deleteChildren("#refs");
+	var id_ = that.id.replace("c", "");
+	var src = `https://images.ygoprodeck.com/images/cards_cropped/${id_}.jpg`;
 
-	// var refs = that.dataset.refs;
-	
-	// if(!refs) return;
-	
-	// refs = refs.split(",");
+	var view = document.querySelector("#view");
+	view.src = src;
 
-	// if(refs.length > 0){
-	// 	for (var i = 0; i < refs.length; i++){
-	// 		var refi 	= document.querySelector(refs[i]);
-	// 		var img 	= document.createElement("img");
-			
-	// 		img.id 		= refi.id;
-	// 		img.width 	= refi.width;
-	// 		img.loading = refi.loading;
-	// 		img.src 	= refi.src;
-	// 		img.title 	= refi.title;
-	// 		// img.onmouseover 	= refi.onmouseover;
-	// 		img.dataset.refs 	= refi.dataset.refs;
-	// 		img.dataset.nrefs 	= refi.dataset.nrefs;
-	// 		img.dataset.brefs 	= refi.dataset.brefs;
-	// 		img.dataset.toggle 	= refi.dataset.toggle;
-	// 		img.style.marginLeft  = (i + 1) * parseInt(img.width);
+	var data = document.querySelector("#data");
+	var card = document.querySelector(`#c${id_}`);
+	var types = card.getAttribute("data-types");
+	for(let i = 0; i < types.length; i++)
+		data.className += types[i];
+	for(let i = 1; i < 6; i++)
+		data.querySelector(`#i${i}`).innerHTML = document.querySelector(`#i${id_}-${i}`).innerHTML;
+}
+function hide(){
+	document.querySelector("#view").src = "";
 
-	// 		document.querySelector("#refs").appendChild(img);
-	// 	}
-	// }
-	// else{
-	// 	deleteChildren("#refs");
-	// }
+	var data = document.querySelector("#data");
+	for(let i = 1; i < 6; i++)
+		data.querySelector(`#i${i}`).innerHTML = "";
+
+	data.className = "";
 }
 function deleteChildren(tag) {
 	var e = document.querySelector(tag);
 
 	var child = e.lastElementChild; 
+
 	while (child) {
 	    e.removeChild(child);
 	    child = e.lastElementChild;
 	}
 }
-// function highlight(that){
-// 	if(that.dataset.ref){
-// 		var ref = document.querySelector("#c"+that.dataset.ref);
-// 		document.querySelector("#view").src = ref.src;
-// 		document.querySelector("#ref").src = that.src;
-// 	}
-// }
