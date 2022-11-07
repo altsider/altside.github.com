@@ -149,11 +149,11 @@ main{
 	font-weight: bolder;
 	font-size: 2em;
 }
-.type-effect{	
-	border-left: solid 6px orange; 
-}
 .type-normal{	
 	border-left: solid 6px yellow; 
+}
+.type-effect{	
+	border-left: solid 6px orange; 
 }
 .type-ritual{	
 	border-left: solid 6px cyan; 
@@ -173,10 +173,12 @@ main{
 .type-pendulum{
 	border-right: solid 6px green;
 }
-.spell, .spell + .type-normal{ 
+.spell, 
+.spell + .type-normal{ 
 	border-left: solid 6px green;
 }
-.trap, .trap + .type-normal{ 
+.trap, 
+.trap + .type-normal{ 
 	border-left: solid 6px magenta;
 }
 .pool + .info{
