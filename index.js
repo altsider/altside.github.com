@@ -10,7 +10,7 @@ function expand(that){
 	var types = card.getAttribute("data-types");
 	for(let i = 0; i < types.length; i++)
 		data.className += types[i];
-	for(let i = 1; i < 6; i++)
+	for(let i = 1; i <= 7; i++)
 		data.querySelector(`#i${i}`).innerHTML = document.querySelector(`#i${id_}-${i}`).innerHTML;
 }
 function hide(){
