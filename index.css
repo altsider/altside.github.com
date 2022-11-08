@@ -193,7 +193,7 @@ main{
 	width: 30px;
 	height: 30px;
 }
-.superior_to{
+.superior_to, .opposite_to{
 	font-weight: bold;
 	font-size: 3em;
 }
