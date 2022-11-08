@@ -190,10 +190,14 @@ main{
 	font-style: italic;
 }
 .about_attr{
-	width: 30px;
-	height: 30px;
+	width: 2em;
+	height: 2em;
 }
-.superior_to, .opposite_to{
+.superior_to{
+	font-weight: bold;
+	font-size: 3em;
+}
+.opposite_to{
 	font-weight: bold;
 	font-size: 3em;
 }
